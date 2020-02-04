@@ -9,7 +9,7 @@ jobs:
         if: startsWith(github.ref, 'refs/tags/')
         run: zip -r vertex_rig.zip vertex_rig/*
       - name: Upload
-        if: success()
+        if: startsWith(github.ref, 'refs/tags/')
         uses: artemShelest/github-action-ghr@zip
         env:
           GHR_ARCH_NAME: vertex_rig.zip
