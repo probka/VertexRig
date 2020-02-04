@@ -9,6 +9,6 @@ jobs:
         uses: artemShelest/github-action-ghr@zip
         if: startsWith(github.ref, 'refs/tags/')
         env:
-          GHR_ARCH_NAME: vertex_rig.zip
-          GHR_PATH: vertex_rig/*
+          GHR_ARCH_NAME: ./vertex_rig.zip
+          GHR_PATH: ./vertex_rig/*
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
