@@ -11,7 +11,7 @@ jobs:
       - name: Zip
         run: zip -r vertex_rig.zip vertex_rig/*
       - name: Upload
-        uses: artemShelest/github-action-ghr@zip
+        uses: artemShelest/action-upload-artifact@master
         env:
-          GHR_ARCH_NAME: vertex_rig.zip
+          SOURCE_PATH: vertex_rig.zip
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
