@@ -4,12 +4,13 @@ jobs:
   release:
     name: Release Artifact
     runs-on: ubuntu-latest
+    if: startsWith(github.ref, 'refs/tags/')
     steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
       - name: Zip
-        if: startsWith(github.ref, 'refs/tags/')
-        run: zip -r vertex_rig.zip . -i ./vertex_rig/*
+        run: zip -r vertex_rig.zip vertex_rig/*
       - name: Upload
-        if: startsWith(github.ref, 'refs/tags/')
         uses: artemShelest/github-action-ghr@zip
         env:
           GHR_ARCH_NAME: vertex_rig.zip
