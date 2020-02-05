@@ -13,5 +13,5 @@ jobs:
       - name: Upload
         uses: artemShelest/action-upload-artifact@master
         env:
-          SOURCE_PATH: vertex_rig.zip
+          RESOURCE_PATH: vertex_rig.zip
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
