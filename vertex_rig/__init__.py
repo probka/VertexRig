@@ -45,7 +45,7 @@ bl_info = {
     "description": ".",
     "version": (0, 1),
     "blender": (2, 80, 0),
-    "location": "File > ",
+    "location": "Edit > Operator Search > Generate Per-Vertex Rig",
     "url": "https://github.com/probka/VertexRig",
     "wiki_url": "https://github.com/probka/VertexRig",
     "tracker_url": "https://github.com/probka/VertexRig/issues",

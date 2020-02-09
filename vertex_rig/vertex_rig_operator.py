@@ -1,6 +1,6 @@
 import bpy
 
-from .bones import add_bones_at_vertices, add_bone_constraints
+from . import bones
 
 DEFAULT_LENGTH = 0.2
 
@@ -13,6 +13,6 @@ class VertexRigOperator(bpy.types.Operator):
 
     def execute(self, context):
         obj = bpy.context.view_layer.objects.active
-        add_bones_at_vertices(obj, DEFAULT_LENGTH)
-        add_bone_constraints(obj)
+        bones.add_bones_at_vertices(obj, DEFAULT_LENGTH)
+        bones.add_bone_constraints(obj)
         return {'FINISHED'}
