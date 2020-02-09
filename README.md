@@ -8,7 +8,7 @@ It is suitable for baking animation and subsequent export to game-engine formats
 # How to use
 ## 1. Download and Install addon
 
-Download the addon.
+Download [Vertex Rig Addon](https://github.com/probka/VertexRig/releases/download/v0.1/vertex_rig.zip).
 
 In Blender go to menu 'Edit > Preferences', select 'Add-ons', press 'Install' button:
 
@@ -55,3 +55,6 @@ Check 'Visual Keying' box and press 'OK'. Wait some time.
 After a bit processing you will get your armature with keyframes:
 
 ![p3_enjoy](https://user-images.githubusercontent.com/16438515/73591792-cb820f80-44fb-11ea-8d02-a937b7bd26e6.png)
+
+
+[]: https://github.com/probka/VertexRig/releases/download/v0.1/vertex_rig.zipVertex

@@ -30,6 +30,7 @@ if 'bpy' in locals():
     modules_to_reload = [
         'bones',
         'vertex_rig_operator',
+        'vertex_rig_panel',
     ]
     for x in modules_to_reload:
         if x in locals():
@@ -37,7 +38,7 @@ if 'bpy' in locals():
 
 import bpy
 
-from . import bones, vertex_rig_operator
+from . import bones, vertex_rig_operator, vertex_rig_panel
 
 bl_info = {
     "name": "Vertex Rig",
@@ -55,7 +56,9 @@ bl_info = {
 
 def register():
     bpy.utils.register_class(vertex_rig_operator.VertexRigOperator)
+    bpy.utils.register_class(vertex_rig_panel.VertexRigPanel)
 
 
 def unregister():
     bpy.utils.unregister_class(vertex_rig_operator.VertexRigOperator)
+    bpy.utils.unregister_class(vertex_rig_panel.VertexRigPanel)
