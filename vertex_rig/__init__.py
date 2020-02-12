@@ -43,7 +43,7 @@ from . import bones, vertex_rig_operator, vertex_rig_panel
 bl_info = {
     'name': "Vertex Rig",
     'author': "Serhii 's.probka' Andreiev",
-    'description': ".",
+    'description': "Creates a skeleton where each bone is attached to the corresponding vertex of the selected object.",
     'version': (1, 0),
     'blender': (2, 80, 0),
     'location': "Edit > Operator Search > Generate Per-Vertex Rig",
