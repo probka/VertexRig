@@ -14,20 +14,22 @@ def add_bones_at_vertices(obj, context, length=5.0):
     layer.objects.active = rig
     layer.update()
     # add bones
-    bpy.ops.object.mode_set(mode='EDIT')
+    bpy.ops.object.mode_set(mode="EDIT")
     for idx, vertex in enumerate(obj.data.vertices):
+        vertex_group = obj.vertex_groups.new(name=str(idx))
+        vertex_group.add([idx], 1, "ADD")
         bone = armature.edit_bones.new(str(idx))
         point = obj.matrix_world @ vertex.co
         bone.head = point
         bone.tail = Vector((point[0], point[1], point[2] + length))
-    bpy.ops.object.mode_set(mode='OBJECT')
+    bpy.ops.object.mode_set(mode="OBJECT")
     return rig
 
 
 def add_bone_constraints(obj, rig):
-    bpy.ops.object.parent_set(type='ARMATURE_AUTO')
-    bpy.ops.object.parent_clear(type='CLEAR')
-    bpy.ops.object.mode_set(mode='POSE')
+    bpy.ops.object.parent_set(type="ARMATURE_AUTO")
+    bpy.ops.object.parent_clear(type="CLEAR")
+    bpy.ops.object.mode_set(mode="POSE")
     for b in rig.pose.bones:
         cl_constraint = b.constraints.new(type="COPY_LOCATION")
         cl_constraint.target = obj
@@ -36,4 +38,4 @@ def add_bone_constraints(obj, rig):
         cr_constraint.target = obj
         cr_constraint.subtarget = b.name
     bpy.ops.pose.armature_apply()
-    bpy.ops.object.mode_set(mode='OBJECT')
+    bpy.ops.object.mode_set(mode="OBJECT")

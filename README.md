@@ -3,7 +3,7 @@
 This addon creates a skeleton where each bone is attached to the corresponding vertex of the selected object.
 It is suitable for baking animation and subsequent export to game-engine formats.
 
-![result](https://user-images.githubusercontent.com/16438515/73591794-cc1aa600-44fb-11ea-833e-24666a684377.gif)
+![result](res/result.gif)
 
 # How to use
 ## 1. Download and Install addon
@@ -12,33 +12,29 @@ Download [Vertex Rig Addon](https://github.com/probka/VertexRig/releases/downloa
 
 In Blender go to menu 'Edit > Preferences', select 'Add-ons', press 'Install' button:
 
-![i1_pressInstall](https://user-images.githubusercontent.com/16438515/73591786-cae97900-44fb-11ea-8805-40ecb1f0a906.png)
+![i1_pressInstall](res/install1.png)
 
 **Locate downloaded addon**
 
-![i1_findAddon](https://user-images.githubusercontent.com/16438515/73591784-cae97900-44fb-11ea-9e60-7c29219061ba.png)
+![i1_findAddon](res/install2.png)
 
-then press checkbox to activate. If everything fine it will appear in 'Properties/Object' panel
+then press checkbox to activate:
 
-![i1_activate](https://user-images.githubusercontent.com/16438515/73591783-cae97900-44fb-11ea-8416-658fd76053cf.png)
+![i1_activate](res/enable.png)
+
+If everything fine, Vertex Rig tab will appear in 'Properties/Object' panel when a mesh is selected.
 
 ## 2. Generate Armature
 
-Prepare animation for the shape. Then press 'GENERATE RIG' button while Shape is selected.
+Prepare animation for the shape. Then press 'Generate rig' button while Shape is selected.
 
-![p2_pressButton](https://user-images.githubusercontent.com/16438515/73591788-cae97900-44fb-11ea-9884-665ac5fe5a17.png)
+![p2_pressButton](res/generate1.png)
 
-Panel shows vertex count for selected object.
-
-- **Be careful: using it for hi poly meshes will take a lot of time. There is no progress bars to visualise the process.**
-
-If any type of object than 'Mesh' is selected, you will get warning:
-
-![error](https://user-images.githubusercontent.com/16438515/73592002-274d9800-44fe-11ea-844b-560dd3ebf869.png)
+- **Be careful: using it for hi-poly meshes may take a lot of time. There is no progress bars to estimate the process.**
 
 After addon finishes it's job, you will get a fresh armature with bones constrained to each vertex of the object.
 
-![p3_ready](https://user-images.githubusercontent.com/16438515/73591793-cb820f80-44fb-11ea-8648-9bb38e8e72ff.png)
+![p3_ready](res/generate2.png)
 
 ## 3. Baking Animation
 
@@ -46,15 +42,12 @@ For now you can bake animation to keyframes and get action for exporting or blen
 
 Select new armature, switch to 'Pose mode', go to menu 'Pose > Animation > Bake action':
 
-![p3_bake](https://user-images.githubusercontent.com/16438515/73591790-cb820f80-44fb-11ea-8229-e99dafcba61d.png)
+![p3_bake](res/bake1.png)
 
 Check 'Visual Keying' box and press 'OK'. Wait some time.
 
-![p3_bakeSettings](https://user-images.githubusercontent.com/16438515/73591791-cb820f80-44fb-11ea-9fbf-1dbb89546a59.png)
+![p3_bakeSettings](res/bake2.png)
 
 After a bit processing you will get your armature with keyframes:
 
-![p3_enjoy](https://user-images.githubusercontent.com/16438515/73591792-cb820f80-44fb-11ea-8d02-a937b7bd26e6.png)
-
-
-[]: https://github.com/probka/VertexRig/releases/download/v0.1/vertex_rig.zipVertex
+![p3_enjoy](res/bake3.png)

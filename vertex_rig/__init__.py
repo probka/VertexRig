@@ -3,7 +3,7 @@ Vertex Rig blender addon
 
 MIT License
 
-Copyright (c) 2020 Serhii 's.probka' Andreiev
+Copyright (c) 2020 Serhii "s.probka" Andreiev
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -24,13 +24,13 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 """
 
-if 'bpy' in locals():
+if "bpy" in locals():
     import importlib
 
     modules_to_reload = [
-        'bones',
-        'vertex_rig_operator',
-        'vertex_rig_panel',
+        "bones",
+        "vertex_rig_operator",
+        "vertex_rig_panel",
     ]
     for x in modules_to_reload:
         if x in locals():
@@ -41,16 +41,16 @@ import bpy
 from . import bones, vertex_rig_operator, vertex_rig_panel
 
 bl_info = {
-    "name": "Vertex Rig",
-    "author": "Serhii 's.probka' Andreiev",
-    "description": ".",
-    "version": (0, 1),
-    "blender": (2, 80, 0),
-    "location": "Edit > Operator Search > Generate Per-Vertex Rig",
-    "url": "https://github.com/probka/VertexRig",
-    "wiki_url": "https://github.com/probka/VertexRig",
-    "tracker_url": "https://github.com/probka/VertexRig/issues",
-    "category": "Rigging",
+    'name': "Vertex Rig",
+    'author': "Serhii 's.probka' Andreiev",
+    'description': ".",
+    'version': (0, 1),
+    'blender': (2, 80, 0),
+    'location': "Edit > Operator Search > Generate Per-Vertex Rig",
+    'url': "https://github.com/probka/VertexRig",
+    'wiki_url': "https://github.com/probka/VertexRig",
+    'tracker_url': "https://github.com/probka/VertexRig/issues",
+    'category': "Rigging",
 }
 
 
