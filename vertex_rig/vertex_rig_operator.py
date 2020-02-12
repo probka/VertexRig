@@ -1,18 +1,18 @@
-import bpy
+from bpy.types import Operator
 
-from .bones import add_bones_at_vertices, add_bone_constraints
+from . import bones
 
 DEFAULT_LENGTH = 0.2
 
 
-class VertexRigOperator(bpy.types.Operator):
+class VertexRigOperator(Operator):
     """Generate bones on each vertex"""
     bl_label = "Generate Per-Vertex Rig"
     bl_idname = "mesh.generate_vertex_rig"
-    bl_options = {'REGISTER', 'UNDO'}
+    bl_options = {"REGISTER", "UNDO"}
 
     def execute(self, context):
-        obj = bpy.context.view_layer.objects.active
-        add_bones_at_vertices(obj, DEFAULT_LENGTH)
-        add_bone_constraints(obj)
-        return {'FINISHED'}
+        obj = context.active_object
+        rig = bones.add_bones_at_vertices(obj, context, DEFAULT_LENGTH)
+        bones.add_bone_constraints(obj, rig)
+        return {"FINISHED"}
