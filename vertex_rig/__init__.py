@@ -44,7 +44,7 @@ bl_info = {
     'name': "Vertex Rig",
     'author': "Serhii 's.probka' Andreiev",
     'description': ".",
-    'version': (0, 1),
+    'version': (1, 0),
     'blender': (2, 80, 0),
     'location': "Edit > Operator Search > Generate Per-Vertex Rig",
     'url': "https://github.com/probka/VertexRig",
