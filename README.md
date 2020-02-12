@@ -32,7 +32,7 @@ Prepare animation for the shape. Then press 'Generate rig' button while Shape is
 
 - **Be careful: using it for hi-poly meshes may take a lot of time. There is no progress bars to estimate the process.**
 
-After addon finishes it's job, you will get a fresh armature with bones constrained to each vertex of the object.
+After addon finishes it's job, you will get a fresh armature with bones constrained to each vertex of the object. Mesh will also receive the corresponding vertex groups, so that you can attach it to the skeleton after baking bone animations. 
 
 ![p3_ready](res/generate2.png)
 
