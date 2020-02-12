@@ -8,7 +8,7 @@ It is suitable for baking animation and subsequent export to game-engine formats
 # How to use
 ## 1. Download and Install addon
 
-Download [Vertex Rig Addon](https://github.com/probka/VertexRig/releases/download/v0.1/vertex_rig.zip).
+Download [Vertex Rig Addon](https://github.com/probka/VertexRig/releases/download/v1.0/vertex_rig.zip).
 
 In Blender go to menu 'Edit > Preferences', select 'Add-ons', press 'Install' button:
 
