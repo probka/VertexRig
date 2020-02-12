@@ -12,15 +12,15 @@ Download [Vertex Rig Addon](https://github.com/probka/VertexRig/releases/downloa
 
 In Blender go to menu 'Edit > Preferences', select 'Add-ons', press 'Install' button:
 
-![i1_pressInstall](res/install1.png)
+![i1_pressInstall](res/install_1.png)
 
 **Locate downloaded addon**
 
-![i1_findAddon](res/install2.png)
+![i1_findAddon](res/install_2.png)
 
 then press checkbox to activate:
 
-![i1_activate](res/enable.png)
+![i1_activate](res/install_3.png)
 
 If everything fine, Vertex Rig tab will appear in 'Properties/Object' panel when a mesh is selected.
 
